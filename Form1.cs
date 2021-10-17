@@ -34,5 +34,25 @@ namespace WinFApp
 
       
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // dit is om weg te schrijven, maar waar en hoe moet dit?
+
+            /*var outputstream = new FileStream("result.xml", FileMode.CreateNew, FileAccess.Write);
+            serializer.Serialize(outputstream, purchaseorder);
+            */
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            PurchaseOrder po = new PurchaseOrder();
+            po.Items
+        }
+
+
+        // ik moet ook linq gebruiken, maar dat hebben we gezien met sql en niet xml toch? via de .CreateCommand().
+        // via xml weet ik niet hoe het moet.
     }
 }
