@@ -48,7 +48,21 @@ namespace WinFApp
         {
 
             PurchaseOrder po = new PurchaseOrder();
-            po.Items
+            Item item = new Item();
+
+           // voor elke eigenschap moet ik aan de gebruiker de mogelijkheid geven
+           // om een waarde in te geven en die waarde gelijk stellen aan de variabelen die ik hieronder aangemaakt heb?
+            /*
+            item.Comment;
+            item.Quantity;
+            item.ShipDate;
+            item.ProductName;
+            item.UsPrice;
+            item.ProductName;
+            */
+
+            
+        
         }
 
 
