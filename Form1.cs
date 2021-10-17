@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace WinFApp
@@ -65,8 +66,27 @@ namespace WinFApp
         
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //    // ik moet ook linq gebruiken, maar dat hebben we gezien met sql en niet xml toch? via de .CreateCommand().
+            // via xml weet ik niet hoe het moet.
+            // hiermee wil ik gebruik maken van linq, maar weet niet echt wat ik doe.
 
-        // ik moet ook linq gebruiken, maar dat hebben we gezien met sql en niet xml toch? via de .CreateCommand().
-        // via xml weet ik niet hoe het moet.
+            var filename = "purchase.xml";
+            var currentDirectory = Directory.GetCurrentDirectory();
+            var purchaseOrderFilepath = Path.Combine(currentDirectory, filename);
+            XElement purchaseOrder = XElement.Load(filename);
+
+
+            // heb ik ook geknipt en geplakt. Ik kon het doen, maar nu zet mijn hoofd zodanig vol dat zelfs wat ik kon doen niet meer lukt.
+            IEnumerable<string> partNos = from items in purchaseOrder.Descendants("Item")
+                                          select (string)items.Attribute("PartNumber");
+
+        }
+
+
+
+
+     
     }
 }
